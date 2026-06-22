@@ -17,7 +17,7 @@ function bundleRoot(argv: string[]): string {
 }
 
 export async function main(argv: string[]): Promise<number> {
-  if (argv.includes('--version') || argv[0] === 'version') { console.log('okf 0.1.0'); return 0; }
+  if (argv.includes('--version') || argv[0] === 'version') { console.log('okf 0.1.1'); return 0; }
   const cmd = argv[0];
   const rest = argv.slice(1);
   const root = bundleRoot(rest);

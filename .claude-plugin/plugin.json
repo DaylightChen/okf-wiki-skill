@@ -1,0 +1,12 @@
+{
+  "name": "okf-wiki",
+  "description": "Manage an Open Knowledge Format (OKF) wiki — author, validate, index, refactor, search, and visualize a markdown+YAML knowledge bundle.",
+  "version": "0.1.1",
+  "author": {
+    "name": "DaylightChen"
+  },
+  "homepage": "https://github.com/DaylightChen/okf-wiki-skill",
+  "repository": "https://github.com/DaylightChen/okf-wiki-skill",
+  "license": "MIT",
+  "keywords": ["okf", "wiki", "knowledge", "markdown", "yaml"]
+}

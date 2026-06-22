@@ -8,9 +8,24 @@ orchestrates it. Runtime: Node ≥ 20, no install. Dev: `cd toolkit && npm insta
 
 ## Install
 
-The skill ships as a self-contained bundle on each release — `SKILL.md`,
-`references/`, and the zero-install `okf.mjs` CLI, nothing else. Requires only
-Node ≥ 20.
+Requires only Node ≥ 20. Two ways to consume it:
+
+### As a plugin (recommended)
+
+Install via the Claude Code plugin marketplace — versioned, with updates:
+
+```
+/plugin marketplace add DaylightChen/okf-wiki-skill
+/plugin install okf-wiki@okf-wiki-marketplace
+```
+
+The marketplace is served from this repo's default branch. Invoke the skill as
+`/okf-wiki:okf-wiki`.
+
+### As a standalone skill (tarball)
+
+Each release also ships a self-contained bundle — `SKILL.md`, `references/`, and
+the zero-install `okf.mjs` CLI, nothing else.
 
 Install the latest release into your **user** skills (available in every project):
 

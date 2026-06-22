@@ -3415,7 +3415,7 @@ function bundleRoot(argv) {
 }
 async function main(argv) {
   if (argv.includes("--version") || argv[0] === "version") {
-    console.log("okf 0.1.0");
+    console.log("okf 0.1.1");
     return 0;
   }
   const cmd = argv[0];

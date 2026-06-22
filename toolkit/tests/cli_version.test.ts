@@ -9,7 +9,7 @@ describe('cli', () => {
     try {
       const code = await main(['--version']);
       expect(code).toBe(0);
-      expect(logs.join('\n')).toMatch(/okf 0\.1\.0/);
+      expect(logs.join('\n')).toMatch(/okf 0\.1\.1/);
     } finally {
       console.log = orig;
     }

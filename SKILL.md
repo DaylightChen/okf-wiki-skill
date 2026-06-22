@@ -16,8 +16,12 @@ install. Run every command as:
 
     node <skill-dir>/toolkit/dist/okf.mjs <command> --bundle <wiki-path> [options]
 
-Resolve `<wiki-path>` from the user (ask once if unknown; honor `$OKF_BUNDLE`).
-Commands: `validate · index · new · move · search · backlinks · log · viz`.
+`<skill-dir>` is this skill's own directory. When installed as a plugin it is
+`${CLAUDE_PLUGIN_ROOT}` (use that env var directly); when installed standalone
+under `~/.claude/skills/okf-wiki/` (or a project's `.claude/skills/`), use that
+path. Resolve `<wiki-path>` from the user (ask once if unknown; honor
+`$OKF_BUNDLE`). Commands: `validate · index · new · move · search · backlinks ·
+log · viz`.
 
 ## Profile
 

@@ -1,0 +1,19 @@
+{
+  "name": "okf",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": { "okf": "dist/okf.mjs" },
+  "scripts": {
+    "build": "esbuild src/main.ts --bundle --platform=node --target=node20 --format=esm --outfile=dist/okf.mjs",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": { "js-yaml": "^4.1.0" },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20.11.0",
+    "esbuild": "^0.20.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.4.0"
+  }
+}

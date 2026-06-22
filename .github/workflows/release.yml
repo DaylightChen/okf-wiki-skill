@@ -56,11 +56,24 @@ jobs:
             exit 1
           fi
 
+      - name: Package installable skill bundle
+        run: |
+          STAGE="okf-wiki"
+          rm -rf "$STAGE"
+          mkdir -p "$STAGE/toolkit/dist" "$STAGE/references"
+          cp SKILL.md README.md "$STAGE/"
+          cp references/*.md "$STAGE/references/"
+          cp toolkit/dist/okf.mjs "$STAGE/toolkit/dist/"
+          # Stable asset name (no version) so /releases/latest/download/ works.
+          tar -czf okf-wiki-skill.tar.gz "$STAGE"
+          echo "Bundled $(tar -tzf okf-wiki-skill.tar.gz | wc -l) entries."
+
       - name: Create GitHub Release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release create "$GITHUB_REF_NAME" \
+            okf-wiki-skill.tar.gz \
             toolkit/dist/okf.mjs \
             --title "$GITHUB_REF_NAME" \
             --generate-notes
